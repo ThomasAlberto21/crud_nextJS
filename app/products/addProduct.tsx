@@ -6,6 +6,7 @@ export default function AddProduct() {
   const [title, setTitle] = useState('');
   const [price, setPrice] = useState('');
   const [modal, setModal] = useState(false);
+  const [isMutating, setIsMutating] = useState(false);
 
   const router = useRouter();
 
@@ -15,6 +16,7 @@ export default function AddProduct() {
 
   async function handleSubmit(e: SyntheticEvent) {
     e.preventDefault();
+    setIsMutating(true);
     await fetch('http://localhost:5000/products', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -23,7 +25,7 @@ export default function AddProduct() {
         price: price,
       }),
     });
-
+    setIsMutating(false);
     setTitle('');
     setPrice('');
     router.refresh();
@@ -78,9 +80,16 @@ export default function AddProduct() {
               >
                 Close
               </button>
-              <button type='submit' className='btn btn-primary'>
-                Save
-              </button>
+
+              {!isMutating ? (
+                <button type='submit' className='btn btn-primary'>
+                  Save
+                </button>
+              ) : (
+                <button type='button' className='btn loading'>
+                  Saving...
+                </button>
+              )}
             </div>
           </form>
         </div>
