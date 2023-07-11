@@ -22,7 +22,7 @@ export default function AddProduct() {
 
       <div className='modal'>
         <div className='modal-box'>
-          <h3 className='font-bold text-lg '>Add New Product</h3>
+          <h3 className='font-bold text-lg mb-5'>Add New Product</h3>
           <form>
             <div className='form-control'>
               <label className='label font-bold'>Title</label>
