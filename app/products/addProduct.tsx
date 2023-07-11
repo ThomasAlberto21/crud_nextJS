@@ -10,7 +10,7 @@ export default function AddProduct() {
 
   return (
     <div>
-      <button className='btn' onClick={handleChange}>
+      <button className='btn bg-white text-black hover:bg-gray-400' onClick={handleChange}>
         Add New
       </button>
       <input
@@ -22,7 +22,7 @@ export default function AddProduct() {
 
       <div className='modal'>
         <div className='modal-box'>
-          <h3 className='font-bold text-lg'>Add New Product</h3>
+          <h3 className='font-bold text-lg '>Add New Product</h3>
           <form>
             <div className='form-control'>
               <label className='label font-bold'>Title</label>
@@ -42,7 +42,7 @@ export default function AddProduct() {
             </div>
 
             <div className='modal-action'>
-              <button type='button' className='btn' onClick={handleChange}>
+              <button type='button' className='btn bg-red-500' onClick={handleChange}>
                 Close
               </button>
               <button type='submit' className='btn btn-primary'>

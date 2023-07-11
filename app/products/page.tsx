@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import AddProduct from './addProduct';
 
 export const metadata: Metadata = {
   title: 'Products',
@@ -22,6 +23,10 @@ export default async function ProductList() {
 
   return (
     <div className='py-10 px-10'>
+      <div className='py-2'>
+        <AddProduct />
+      </div>
+
       <table className='table w-full'>
         <thead className='bg-white border-white'>
           <tr className='text-black'>
