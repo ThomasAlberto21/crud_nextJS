@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import AddProduct from './addProduct';
 import DeleteProduct from './deleteProduct';
+import UpdateProduct from './updateProduct';
 
 export const metadata: Metadata = {
   title: 'Products',
@@ -43,8 +44,9 @@ export default async function ProductList() {
               <td>{index + 1}</td>
               <td>{product.title}</td>
               <td>{product.price}</td>
-              <td>
+              <td className='flex items-center gap-2'>
                 <DeleteProduct {...product} />
+                <UpdateProduct {...product} />
               </td>
             </tr>
           ))}
