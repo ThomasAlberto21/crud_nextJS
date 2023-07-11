@@ -19,9 +19,9 @@ export default async function ProductList() {
   const products: Product[] = await getProducts();
 
   return (
-    <div className='py-10 px-10 '>
-      <table className='table w-full border-white'>
-        <thead className='bg-white'>
+    <div className='py-10 px-10'>
+      <table className='table w-full'>
+        <thead className='bg-white border-white'>
           <tr className='text-black'>
             <th>No</th>
             <th>Product Name</th>
