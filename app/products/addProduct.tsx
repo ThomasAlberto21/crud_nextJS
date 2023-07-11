@@ -75,7 +75,7 @@ export default function AddProduct() {
             <div className='modal-action'>
               <button
                 type='button'
-                className='btn bg-red-500'
+                className='btn bg-red-500 text-white'
                 onClick={handleChange}
               >
                 Close
