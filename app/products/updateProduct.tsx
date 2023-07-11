@@ -24,7 +24,7 @@ export default function UpdateProduct(product: Product) {
     e.preventDefault();
     setIsMutating(true);
     await fetch(`http://localhost:5000/products/${product.id}`, {
-      method: 'PACTH',
+      method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         title: title,
