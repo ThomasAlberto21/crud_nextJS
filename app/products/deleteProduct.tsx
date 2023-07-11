@@ -44,7 +44,7 @@ export default function DeleteProduct(product: Product) {
       <div className='modal'>
         <div className='modal-box'>
           <h3 className='font-bold text-lg mb-5'>
-            Are You Sure To Delete This Data
+            Are You Sure To Delete {product.title} ?
           </h3>
 
           <div className='modal-action'>
